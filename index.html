@@ -6,19 +6,19 @@
         <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
         <link href="bower_components/unsemantic/assets/stylesheets/unsemantic-grid-responsive-tablet.css" rel="stylesheet">
         <link href="assets/css/index.css" rel="stylesheet">
-        <meta author="Naoki Rinmous">
+        <meta name="author" content="Naoki Rinmous">
         <meta charset="utf-8">
         <title>Naoki Rinmous is here!</title>
     </head>
     <body>
         <div id="main-box">
             <div class="grid-container" id="header">
-                <div class="grid-25">
+                <div class="grid-25 mobile-grid-100">
                     <div id="profile-picture-container">
                         <span id="profile-picture"></span>
                     </div>
                 </div>
-                <div class="grid-75 content">
+                <div class="grid-75 mobile-grid-100 content">
                     <h1>Hey, it's <span class="name">Naoki Rinmous!</span></h1>
                     <div class="account account-white">
                         <i class="fa fa-key" aria-hidden="true"></i>
@@ -38,8 +38,19 @@
                     </div>
                 </div>
             </div>
+            <div class="grid-container" id="site-links">
+                <div class="grid-20 mobile-grid-100 entry">
+                    <a href="https://futa.moe/"><i class="fa fa-server" aria-hidden="true"></i>futa.moe</a>
+                </div>
+                <div class="grid-40 mobile-grid-100 entry">
+                    <a class="disabled" href="#"><i class="fa fa-th-list" aria-hidden="true"></i>Gallery (under construction)</a>
+                </div>
+                <div class="grid-40 mobile-grid-100 entry">
+                    <a class="disabled" href="#"><i class="fa fa-code" aria-hidden="true"></i>Blog (under construction)</a>
+                </div>
+            </div>
             <div class="grid-container" id="body">
-                <div class="grid-50 tile" id="self-introduction">
+                <div class="grid-50 mobile-grid-100 tile" id="self-introduction">
                     <h2>who am I...</h2>
                     <p>
                         a simple & naïve senior student,<br />
@@ -47,7 +58,7 @@
                         trying to change the way to live for people
                     </p> 
                 </div> 
-                <div class="grid-50 tile" id="social-accounts">
+                <div class="grid-50 mobile-grid-100 tile" id="social-accounts">
                     <h2>how to reach?</h2>
                     <div class="account account-dark">
                         <i class="fa fa-plane" aria-hidden="true"></i>

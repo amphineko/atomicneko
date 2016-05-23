@@ -71,7 +71,7 @@ body {
 }
 
 #header .content h1 {
-    color: #E9E9E9;
+    color: #C9C9C9;
     font-size: 1.7em;
     font-weight: 300;
     line-height: 3em;
@@ -79,7 +79,44 @@ body {
 }
 
 #header .content h1 .name {
+    color: #F9F9F9;
     font-size: 1.2em;
+}
+
+#site-links {
+    margin: 0;
+    margin-bottom: 0.2em;
+    padding: 0;
+}
+
+#site-links .entry {
+    display: inline-block;
+    list-style: none;
+}
+
+#site-links .entry a {
+    border-bottom: 0.2em solid #DDD;
+    color: #4E4B59;
+    display: block;
+    margin: 0 0.4em;
+    padding: 1em 2em;
+    text-decoration: none;
+    transition-duration: 0.25s;
+}
+
+#site-links .entry a:hover {
+    border-bottom: 0.4em solid #1E3B59;
+    margin-bottom: 0;
+    transition-duration: 0.25s;
+}
+
+#site-links .entry a.disabled {
+    cursor: not-allowed;
+}
+
+#site-links .entry i {
+    margin-right: 0.4em;
+    vertical-align: middle;
 }
 
 #main-box {
