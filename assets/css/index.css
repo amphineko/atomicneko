@@ -1,0 +1,125 @@
+body {
+    background: url('../images/darknoise.png');
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, Arial, 'Microsoft YaHei', STXihei, 华文细黑, 微软雅黑, SimSun, 宋体, Heiti, 黑体, sans-serif;
+    padding: 5% 0;
+}
+
+.account {
+    font-size: 1em;
+    line-height: 2em;
+}
+
+.account a {
+    display: inline-block;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.account i {
+    display: inline-block;
+    font-size: 1.5em;
+    text-align: center;
+    vertical-align: middle;
+    width: 1.5em;
+}
+
+.account span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.account.account-dark a {
+    color: #1E5184;
+}
+
+.account.account-white a {
+    color: #DDD;
+}
+
+.account.account-white i {
+    color: #EEE;
+}
+
+#footer {
+    background: #333;
+    color: #DDD;
+    display: block;
+    font-size: 0.9em;
+    line-height: 2em;
+    margin-top: 2em;
+    padding: 0.8em 1.2em;
+}
+
+#footer span {
+    display: inline-block;
+    margin-right: 0.2em;
+}
+
+#footer span a {
+    color: #759BC2;
+    display: inline-block;
+    text-decoration: none;
+}
+
+#header {
+    background: #385068;
+    padding: 1em 0.5em;
+}
+
+#header .content {
+    display: block;
+}
+
+#header .content h1 {
+    color: #E9E9E9;
+    font-size: 1.7em;
+    font-weight: 300;
+    line-height: 3em;
+    margin: 0;
+}
+
+#header .content h1 .name {
+    font-size: 1.2em;
+}
+
+#main-box {
+    background: white;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.15);
+    display: block;
+    margin: 0 auto;
+    max-width: 64em;
+}
+
+#profile-picture-container {
+    margin: 0 auto;
+    max-height: 16em;
+    max-width: 16em;
+    position: relative;
+}
+
+#profile-picture-container::before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+
+#profile-picture {
+    background: url('../images/headpic.png');
+    background-size: 100%;
+    border: 1px solid #AAA;
+    border-radius: 50%;
+    bottom: 1em;
+    display: block;
+	left: 1em;    
+    position: absolute;
+	right: 1em;
+	top: 1em;
+}
+
+#self-introduction p {
+    line-height: 2em;
+}
+
+.tile h2 {
+    font-weight: 300;
+}
