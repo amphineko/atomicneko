@@ -81,6 +81,7 @@ body {
 #header .content h1 .name {
     color: #F9F9F9;
     font-size: 1.2em;
+    white-space: nowrap;
 }
 
 #site-links {
