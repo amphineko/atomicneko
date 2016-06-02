@@ -4,46 +4,46 @@
     <head>
         <link href="bower_components/normalize-css/normalize.css" rel="stylesheet">
         <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-        <link href="assets/css/index.css" rel="stylesheet">
         <link href="bower_components/unsemantic/assets/stylesheets/unsemantic-grid-responsive.css" rel="stylesheet">
+        <link href="assets/css/index.v2.css" rel="stylesheet">
         <meta name="author" content="Naoki Rinmous">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Naoki Rinmous is here!</title>
     </head>
     <body>
-        <div id="main-box">
-            <div class="grid-container" id="header">
+        <div class="margin-wrap">
+            <div class="block block-blue grid-container">
                 <div class="grid-25 mobile-grid-100">
-                    <div id="profile-picture-container">
-                        <span id="profile-picture"></span>
+                    <div class="picture-container">
+                        <span class="picture"></span>
                     </div>
                 </div>
-                <div class="grid-75 mobile-grid-100 content">
-                    <h1>Hey, it's <span class="name">Naoki Rinmous!</span></h1>
+                <div class="grid-75 mobile-grid-100 header">
+                    <h1 class="title">Hey, it's <span class="name">Naoki Rinmous!</span></h1>
                     <div class="account account-white">
                         <i class="fa fa-key" aria-hidden="true"></i>
-                        <a href="https://keybase.io/amphineko">keybase.io/amphineko</a>
+                        <a class="link" href="https://keybase.io/amphineko">keybase.io/amphineko</a>
                     </div>
                     <div class="account account-white">
                         <i class="fa fa-github" aria-hidden="true"></i>
-                        <a href="https://github.com/amphineko">@amphineko</a>
+                        <a class="link" href="https://github.com/amphineko">@amphineko</a>
                     </div>
                 </div>
             </div>
-            <div class="grid-container" id="site-links">
-                <div class="grid-20 mobile-grid-100 entry">
-                    <a href="https://futa.moe/"><i class="fa fa-server" aria-hidden="true"></i>futa.moe</a>
+            <div class="block block-white link-showcase grid-container">
+                <div class="grid-33 mobile-grid-100 entry">
+                    <a class="link" href="https://futa.moe/"><i class="fa fa-server" aria-hidden="true"></i>futa.moe networking</a>
                 </div>
-                <div class="grid-40 mobile-grid-100 entry">
-                    <a class="disabled" href="#"><i class="fa fa-th-list" aria-hidden="true"></i>Gallery (under construction)</a>
+                <div class="grid-33 mobile-grid-100 entry">
+                    <a class="link disabled" href="#"><i class="fa fa-th-list" aria-hidden="true"></i>Gallery (under construction)</a>
                 </div>
-                <div class="grid-40 mobile-grid-100 entry">
-                    <a class="disabled" href="#"><i class="fa fa-code" aria-hidden="true"></i>Blog (under construction)</a>
+                <div class="grid-33 mobile-grid-100 entry">
+                    <a class="link disabled" href="#"><i class="fa fa-code" aria-hidden="true"></i>Blog (under construction)</a>
                 </div>
             </div>
-            <div class="grid-container" id="body">
-                <div class="grid-50 mobile-grid-100 tile" id="self-introduction">
+            <div class="block block-white grid-container">
+                <div class="grid-50 mobile-grid-100 tile">
                     <h2>who am I...</h2>
                     <p>
                         a simple & naïve senior student,<br />
@@ -51,38 +51,38 @@
                         trying to change the way to live for people
                     </p> 
                 </div> 
-                <div class="grid-50 mobile-grid-100 tile" id="social-accounts">
-                    <h2>how to reach?</h2>
+                <div class="grid-50 mobile-grid-100 tile">
+                    <h2 class="title">how to reach?</h2>
                     <div class="account account-dark">
                         <i class="fa fa-plane" aria-hidden="true"></i>
                         <span>Ingress Agent</span>
-                        <a href="#">@NekoSauce</a>
+                        <a class="link" href="#">@NekoSauce</a>
                     </div>
                     <div class="account account-dark">
                         <i class="fa fa-steam" aria-hidden="true"></i>
                         <span>Steam</span>
-                        <a href="https://steamcommunity.com/id/Amphineko/">NekoSauce</a>
+                        <a class="link" href="https://steamcommunity.com/id/Amphineko/">NekoSauce</a>
                     </div>
                     <div class="account account-dark">
                         <i class="fa fa-send" aria-hidden="true"></i>
                         <span>Telegram</span>
-                        <a href="https://telegram.me/amphineko">@amphineko</a>
+                        <a class="link" href="https://telegram.me/amphineko">@amphineko</a>
                     </div>
                     <div class="account account-dark">
                         <i class="fa fa-twitter" aria-hidden="true"></i>
                         <span>Twitter</span>
-                        <a href="https://twitter.com/amphineko">@amphineko</a>
+                        <a class="link" href="https://twitter.com/amphineko">@amphineko</a>
                     </div>
                     <div class="account account-dark">
                         <i class="fa fa-weibo" aria-hidden="true"></i>
                         <span>Weibo</span>
-                        <a href="http://weibo.com/uncookie">@(uid=uncookie)</a>
+                        <a class="link" href="http://weibo.com/uncookie">@(uid=uncookie)</a>
                     </div>
                 </div>
             </div>
-            <div id="footer">
-                <span>Copyright &copy; 2016 Naoki Rinmous.</span>
-                <span>Powered by <a href="https://github.com/necolas/normalize.css/">normalize.css</a>, <a href="http://fontawesome.io/">Font Awesome</a> and <a href="http://unsemantic.com/">unsemantic</a>.</span>
+            <div class="block block-grey footer grid-container" >
+                <span class="grid-50 mobile-grid-100">Copyright &copy; 2015-2016 Naoki Rinmous.</span>
+                <span class="grid-50 mobile-grid-100">Powered by <a href="https://github.com/necolas/normalize.css/">normalize.css</a>, <a href="http://fontawesome.io/">Font Awesome</a> and <a href="http://unsemantic.com/">unsemantic</a>.</span>
             </div>
         </div>
     </body>
