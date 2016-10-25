@@ -1,6 +1,13 @@
-/* unsemantic import begin */
+// import: normalize
+@import "../../bower_components/normalize-css/normalize.css";
+
+// import: unsemantic
 @import "../../bower_components/unsemantic/assets/sass/unsemantic-grid-responsive-no-ie7";
-/* unsemantic import end */
+
+// import: font-awesome
+@import "../../bower_components/font-awesome/scss/font-awesome";
+
+// content: index.scss
 
 $bio-name-size: 2em;
 $shadow: 0 0 4px rgba(0, 0, 0, 0.3);
