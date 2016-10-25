@@ -1,0 +1,23 @@
+{
+  "name": "loopback.moe",
+  "version": "0.0.1",
+  "description": "",
+  "main": "",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.13",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amphineko/loopback.moe.git"
+  },
+  "scripts": {
+    "postinstall": "bower install"
+  },
+  "author": "Naoki Rinmous <sukareki@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://loopback.moe/"
+}
