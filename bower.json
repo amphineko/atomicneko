@@ -1,12 +1,15 @@
 {
-  "name": "loopback.moe",
+  "name": "amphineko",
+  "description": "",
+  "main": "index.html",
+  "keywords": [
+    "home"
+  ],
   "authors": [
     "Naoki Rinmous <sukareki@gmail.com>"
   ],
-  "description": "loopback.moe homepage",
-  "main": "index.html",
   "license": "MIT",
-  "homepage": "https://loopback.moe/",
+  "homepage": "https://futa.moe/amphineko/",
   "private": true,
   "ignore": [
     "**/.*",
@@ -16,8 +19,7 @@
     "tests"
   ],
   "dependencies": {
-    "normalize-css": "^4.1.1",
     "unsemantic": "^1.1.3",
-    "font-awesome": "^4.6.3"
+    "font-awesome": "^4.7.0"
   }
 }

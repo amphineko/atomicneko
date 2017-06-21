@@ -1,0 +1,25 @@
+.chem-element {
+    background: rgba(255,163,163,.09);
+    border-radius: .25em;
+    box-shadow: 0 0 0.1em 0.1em rgba(0,0,0,.05);
+    color: #fff;
+    margin-right: .1em;
+    padding: .35em .1em .35em .35em;
+    transition-duration: .5s;
+}
+
+.chem-element:hover {
+    box-shadow: 0 0 0.2em 0.2em rgba(255,255,255,.05);
+    transform: translate(1em,1em);
+}
+
+
+.chem-element[element=sodium]::before {
+    content: '11';
+    font-size: .45em;
+    vertical-align: -.5em;
+}
+
+.chem-element[element="sodium"]:hover {
+    background: #faa3a3;
+}

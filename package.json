@@ -1,23 +1,22 @@
 {
-  "name": "loopback.moe",
+  "name": "amphineko",
   "version": "0.0.1",
   "description": "",
-  "main": "",
-  "dependencies": {},
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-clean-css": "^2.0.13",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.3.2"
-  },
+  "main": "gulpfile.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/amphineko/loopback.moe.git"
-  },
-  "scripts": {
-    "postinstall": "bower install"
+    "url": "git+https://github.com/amphineko/amphineko.git"
   },
   "author": "Naoki Rinmous <sukareki@gmail.com>",
   "license": "MIT",
-  "homepage": "https://loopback.moe/"
+  "bugs": {
+    "url": "https://github.com/amphineko/amphineko/issues"
+  },
+  "homepage": "https://futa.moe/amphineko/",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.4.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0"
+  }
 }

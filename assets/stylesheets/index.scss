@@ -1,236 +1,57 @@
-// import: normalize
-@import "../../bower_components/normalize-css/normalize.css";
+@import "../../bower_components/font-awesome/scss/font-awesome.scss";
+@import "../../bower_components/unsemantic/assets/sass/unsemantic-grid-responsive.scss";
 
-// import: unsemantic
-@import "../../bower_components/unsemantic/assets/sass/unsemantic-grid-responsive-no-ie7";
+@import "header.scss";
+@import "identities.scss";
 
-// import: font-awesome
-@import "../../bower_components/font-awesome/scss/font-awesome";
-
-// content: index.scss
-
-$bio-name-size: 2em;
-$shadow: 0 0 4px rgba(0, 0, 0, 0.3);
-$shadow-float: 2px 2px 4px rgba(0, 0, 0, 0.3);
-
-@mixin border-radius($value) {
-    -webkit-border-radius: $value;
-    -moz-border-radius: $value;
-    border-radius: $value;
-}
-
-@mixin box-shadow($value) {
-    -webkit-box-shadow: $value;
-    -moz-box-shadow: $value;
-    box-shadow: $value;
-}
-
-@mixin box-sizing($value) {
-    -webkit-box-sizing: $value;
-    -moz-box-sizing: $value;
-    box-sizing: $value;
-}
-
-@mixin transition($value) {
-    -webkit-transition: $value;
-    -moz-transition: $value;
-    -o-transition: $value;
-    transition: $value;
-}
+@import "chem-elements.scss";
 
 body {
-    background: url('../images/nat-pants.png');
-    font-family: "Helvetica Neue", Helvetica, Arial, "PingFangTC-Light", "Microsoft YaHei", 微软雅黑, "STHeiti Light", "STXihei", "华文细黑", Heiti, 黑体, sans-serif;
-    padding: 1em 0;
-}
-
-.account {
-    padding: 0.5em;
-    text-decoration: none;
-    width: auto;
-}
-
-.account:hover {
-    @include box-shadow($shadow-float);;
-}
-
-.account, .account:hover {
-    @include transition(all 0.25s);
-}
-
-.account .fa {
-    text-align: center;
-    width: 1.35em;
-}
-
-.account .fake-link, .account .text {
-    display: inline-block;
-    margin: 0 0.25em;
-}
-
-.account.alt-bio-basic-identity {
-    @include box-shadow($shadow);
-    background: #333;
-    color: #fafafa;
-    margin-top: 1em;
-    @media screen and (max-width: $media-mobile-max) {
-        display: block;
-    }
-    @media screen and (min-width: $media-mobile-max) {
-        display: table;
-    }
-}
-
-.account.alt-bio-basic-identity:hover {
-    background: #423848;
-}
-
-.account.alt-bio-basic-identity .fake-link {
-    color: #bdf;
-}
-
-.account.alt-accounts {
-    color: #333;
-    display: block;
     font-size: 1em;
-    line-height: 2em;
+    margin: 0;
 }
 
-.account.alt-accounts .fa {
-    color: #551a8b;
-    font-size: 1.25em;
+html {
+    background: url('../images/nat-pants.png');
+    font-family: "Helvetica Neue", Helvetica, Arial, PingFangTC-Light, "Microsoft YaHei", 微软雅黑, "STHeiti Light", STXihei, "华文细黑", Heiti, 黑体, sans-serif;
 }
 
-.account.alt-accounts .fake-link {
-    color: #216199;
-}
-
-.bio-basic {
-    background: #385068;
-    padding: 0 0 2em 0;
-    @include box-shadow($shadow);
-}
-
-.bio-basic-identity {
-    padding-bottom: 1em;
-}
-
-.bio-name {
-    color: #ebebeb;
-    display: block;
-    font-size: $bio-name-size*0.65;
-    line-height: 2em;
-    text-align: center;
-    white-space: nowrap;
-}
-
-.bio-picture {
-    @include border-radius(50%);
-    @include box-shadow($shadow);
-    margin-bottom: 1em;
-    width: 100%;
-}
-
-.bio-picture-container {
-    padding: 2em 3em 0 3em;
-}
-
-.bio-story {
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: bottom right;
-    background-image: url('../images/inaristarlight-cablebroken.png');
-    padding: 1em;
-    position: relative;
-}
-
-.bio-story p {
-    font-size: 1.1em;
-    line-height: 2em;
-    margin: 1em 0;
-}
-
-.bio-title {
-    font-size: $bio-name-size;
-    font-weight: 300;
-    line-height: 1em;
-    padding: 0.5em 0;
-}
-
-.bio-title .name, .bio-title .prefix, .bio-title .trademark {
-    display: inline-block;
-    height: 1em;
-    line-height: 1em;
-    vertical-align: bottom;
-}
-
-.bio-title .name {
-    color: #f2f2f2;
-}
-
-.bio-title .prefix {
-    color: #eae6e5;
-}
-
-.bio-title .trademark {
-    color: #cac6c5;
-}
-
-.footer {
-    background: url('../images/darknoise.png');
+.copyright {
+    background: #2b5045;
     color: #ddd;
-    font-size: 0.8em;
-    line-height: 3em;
-    padding: 0 1em;
+    font-size: 0.9em;
+    line-height: 2em;
+    padding: 0.5em 1em;
 }
 
-.footer span {
-    white-space: nowrap;
-}
-
-.page-container {
-    clear: both;
-    margin: 0 auto;
-    max-width: $media-mobile-max*1.25;
-}
-
-.site-links {
-    padding: 0;
-}
-
-.site-links .clickable {
-    @include box-shadow($shadow);
-    background: #38685a;
-    display: block;
-    padding: 0.8em 1em;
+.header .greeting .chem-element {
     text-decoration: none;
-    vertical-align: middle;
 }
 
-.site-links .clickable .fa {
-    text-align: center;
-    width: 1.4em;
+.hosting {
+    background: #38685a;
+    color: #eee;
+    font-size: 0.9em;
+    font-weight: normal;
+    display: block;
+    padding: 0.75em 1em;
+    text-decoration: none;
 }
 
-.site-links .clickable .fa, .site-links .clickable .text {
-    color: #eaeaea;
+.hosting .link {
+    color: #acd;
 }
 
-.tile {
-    padding: 1em;
+.main-container {
+    margin: 0 auto;
+    max-width: 64em;
 }
 
-.tile h2 {
-    color: #333;
-    font-weight: 300;
-    margin-top: 0.25em;
+.no-wrap {
+    display: inline-block;
 }
 
-.tile-column {
-    padding: 0;
-}
-
-.tiles {
-    @include box-shadow($shadow);
-    background: #fffffc;
+.section {
+    box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, 0.125);
+    margin: 1em 0;
 }
