@@ -13,7 +13,7 @@
     "url": "https://github.com/amphineko/amphineko/issues"
   },
   "homepage": "https://futa.moe/amphineko/",
-  "dependencies": {
+  "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.4.1",
     "gulp-rename": "^1.2.2",
