@@ -4,7 +4,7 @@ This repository is a development copy of my homepage ([https://futa.moe/amphinek
 
 Text contents are mainly located at `index.html`. To replace the texts and the picture (`amphineko.png`), can be easily done by editing this file. 
 
-For futuremore modification, including color settings and layouts, check SASS files in `assets/stylesheets`. Don't forget `gulp`-ing to rebuild SASS files and reflect your modification.
+For furthermore modification, including color settings and layouts, check SASS files in `assets/stylesheets`. Don't forget `gulp`-ing to rebuild SASS files and reflect your modification.
 
 ## build
 
