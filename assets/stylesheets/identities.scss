@@ -26,7 +26,7 @@
     text-align: right;
 }
 
-.identity .fa {
+.identity .fab, .identity .fal, .identity .fas { 
     color: rgba(0, 10, 25, 0.65);
     font-size: 1.6em;
     text-align: center;
@@ -58,7 +58,7 @@
     font-size: 0.75em;
 }
 
-.identity-category .title .fa {
+.identity-category .title .fal, .identity-category .title .far, .identity-category .title .fas {
     color: #aaa;
     margin: 0 0.2em;
     transform: rotateZ(-23deg);

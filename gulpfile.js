@@ -3,12 +3,7 @@ const gulp = require('gulp')
 const rename = require('gulp-rename')
 const sass = require('gulp-sass')
 
-gulp.task('default', ['fonts', 'stylesheet'])
-
-gulp.task('fonts', function () {
-    return gulp.src('./node_modules/font-awesome/fonts/*')
-        .pipe(gulp.dest('./assets/fonts/'))
-})
+gulp.task('default', ['stylesheet'])
 
 gulp.task('stylesheet', function () {
     return gulp.src('./assets/stylesheets/index.scss')
