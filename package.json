@@ -17,7 +17,6 @@
     "build": "node_modules/gulp/bin/gulp.js"
   },
   "devDependencies": {
-    "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.4.1",
     "gulp-rename": "^1.2.2",
