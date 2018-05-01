@@ -45,10 +45,9 @@ html {
     color: #acd;
 }
 
-.main-container {
-    background: #476685;
+.inset-container {
+    background: rgba(71, 102, 133, 0.99);
     box-shadow: inset 0 0 0.15em 0.15em rgba(0, 0, 0, 0.125); 
-    padding-bottom: 1em;
 }
 
 .no-wrap {
