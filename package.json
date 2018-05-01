@@ -14,7 +14,7 @@
   },
   "homepage": "https://futa.moe/amphineko/",
   "scripts": {
-    "build": "node_modules/gulp/bin/gulp.js"
+    "build": "node ./node_modules/gulp/bin/gulp.js"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
