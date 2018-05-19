@@ -3,8 +3,6 @@ const gulp = require('gulp')
 const rename = require('gulp-rename')
 const sass = require('gulp-sass')
 
-gulp.task('default', ['stylesheet'])
-
 gulp.task('stylesheet', function () {
     return gulp.src('./assets/stylesheets/index.scss')
         .pipe(sass().on('error', sass.logError))
@@ -15,6 +13,8 @@ gulp.task('stylesheet', function () {
         .pipe(gulp.dest('./assets/stylesheets/'))
 })
 
-gulp.task('watch', ['default'], function () {
-    gulp.watch('./assets/stylesheets/**/*.scss', ['stylesheet'])
-})
+gulp.task('default', gulp.series('stylesheet'))
+
+gulp.task('watch', gulp.series('default', function () {
+    gulp.watch('./assets/stylesheets/**/*.scss', gulp.series('stylesheet'))
+}))
