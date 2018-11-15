@@ -1,4 +1,7 @@
 .header {
+    background: rgba(71, 102, 133, 0.99);
+    box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, 0.125); 
+    padding-bottom: 1.6em;
     padding-top: 1.6em;
 }
 
@@ -8,44 +11,6 @@
     line-height: 1.6em;
     margin: 0;
     text-shadow: 2px 2px 4px rgba(0,0,0,.25);
-}
-
-.header .labels {
-    margin: 0.8em 0;
-}
-
-.header .labels .label {
-    background: #333;
-    box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, 0.15);
-    color: #fff;
-    display: inline-block;
-    font-weight: 300;
-    padding: .5em .75em;
-    position: relative;
-    margin: 1.2em 0;
-    vertical-align: bottom;
-}
-
-.header .labels a.label {
-    text-decoration: none;
-}
-
-.header .labels .label::before {
-    color: #ddd;
-    content: attr(alt);
-    font-size: .5em;
-    left: 0;
-    position: absolute;
-    text-shadow: 2px 2px 4px rgba(0,0,0,.25);
-    top: -1.75em;
-}
-
-.header .labels .label>* {
-    margin-right: .25em;
-}
-
-.header .labels .label .content {
-    color: #ccc;
 }
 
 .header .picture {
