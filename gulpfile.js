@@ -8,7 +8,9 @@ gulp.task('stylesheet', function () {
         .pipe(sass().on('error', sass.logError))
         .pipe(rename('index.bundle.css'))
         .pipe(gulp.dest('./assets/stylesheets/'))
-        .pipe(cleanCss())
+        .pipe(cleanCss({
+            level: 2
+        }))
         .pipe(rename('index.bundle.min.css'))
         .pipe(gulp.dest('./assets/stylesheets/'))
 })
