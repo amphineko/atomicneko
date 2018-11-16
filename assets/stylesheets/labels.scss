@@ -3,14 +3,14 @@
 }
 
 .small-labels .label {
-    color: white;
+    color: #333;
     font-weight: 300;
     padding: 0.5em 0;
     vertical-align: bottom;
 }
 
 .small-labels .label .content {
-    color: #ccc;
+    color: #555;
 }
 
 .small-labels .label .link {
@@ -20,6 +20,10 @@
 .small-labels .group, .small-labels .label {
     display: inline-block;
     position: relative;
+}
+
+.small-labels .group>*, .small-labels>* {
+    vertical-align: middle;
 }
 
 .small-labels .label>* {
@@ -33,22 +37,25 @@
 .small-labels>.group, .small-labels>.label {
     $small-label-group-padding-left: 0.75em;
 
-    background: #333;
+    background: #eee;
     border-radius: 0.35em;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
     box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, 0.1);
     line-height: 1em;
-    margin-right: 0.5em;
-    margin-top: 1.75em;
+    margin: 0.5em;
+    margin-left: 0;
     padding-left: $small-label-group-padding-left;
     padding-right: $small-label-group-padding-left;
 }
 
+.small-labels>.group.alt, .small-labels>.label.alt {
+    margin-top: 1.75em;
+}
+
 /* label alt text */
 
-.small-labels .group::before, .small-labels .label::before {
-    color: #ccc;
+.small-labels .group.alt::before, .small-labels .label.alt::before {
     content: attr(alt);
     font-size: 0.8em;
     left: 0;
