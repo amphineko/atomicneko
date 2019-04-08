@@ -1,10 +1,9 @@
-.intro .block {
-    display: flex;
+.intro {
+    margin: 1em 0;
 }
 
 .intro .block .split {
-    align-self: center;
-    padding: 1em;
+    padding: 0 1em;
 }
 
 .intro p {
@@ -13,6 +12,7 @@
     font-size: 1.2em;
     font-weight: 300;
     line-height: 1.75em;
+    margin: 1em 0;
     overflow: auto;
     padding: 0.5em 0.5em;
 }
