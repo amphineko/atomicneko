@@ -1,0 +1,18 @@
+.intro .block {
+    display: flex;
+}
+
+.intro .block .split {
+    align-self: center;
+    padding: 1em;
+}
+
+.intro p {
+    border-left: 0.25em solid #006080;
+    color: #555;
+    font-size: 1.2em;
+    font-weight: 300;
+    line-height: 1.75em;
+    overflow: auto;
+    padding: 0.5em 0.5em;
+}
