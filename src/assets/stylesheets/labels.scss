@@ -60,7 +60,7 @@
 /* label alt text */
 
 .small-labels .group.alt::before, .small-labels .label.alt::before {
-    content: attr(alt);
+    content: attr(data-alt);
     font-size: 0.8em;
     left: 0;
     position: absolute;

@@ -14,12 +14,12 @@
 }
 
 
-.chem-element[element="neon"]::before {
+.chem-element[data-element="neon"]::before {
     content: '10';
     font-size: 0.45em;
     vertical-align: -0.5em;
 }
 
-.chem-element[element="neon"]:hover {
+.chem-element[data-element="neon"]:hover {
     background: #faa3a3;
 }
