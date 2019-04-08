@@ -2,7 +2,6 @@
   "name": "amphineko",
   "version": "0.0.1",
   "description": "",
-  "main": "gulpfile.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/amphineko/amphineko.git"
@@ -14,13 +13,21 @@
   },
   "homepage": "https://futa.moe/amphineko/",
   "scripts": {
-    "build": "node ./node_modules/gulp/bin/gulp.js"
+    "build": "webpack"
   },
   "devDependencies": {
-    "gulp": "^4.0.0",
-    "gulp-clean-css": "^3.9.4",
-    "gulp-rename": "^1.2.3",
-    "gulp-sass": "^4.0.1",
-    "unsemantic": "^1.2.3"
+    "browser-sync": "^2.26.3",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "css-loader": "^2.1.1",
+    "extract-loader": "^3.1.0",
+    "file-loader": "^3.0.1",
+    "html-loader": "^0.5.5",
+    "mini-css-extract-plugin": "^0.5.0",
+    "node-sass": "^4.11.0",
+    "resolve-url-loader": "^3.1.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "unsemantic": "^1.2.3",
+    "webpack": "^4.29.6"
   }
 }
