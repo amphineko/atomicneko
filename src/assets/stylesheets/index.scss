@@ -49,6 +49,13 @@ $section-border-radius: 2em;
     border-bottom-right-radius: $section-border-radius;
 }
 
+.header {
+    background: url('../images/header-background.svg') #466685;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .header .small-labels .group::before, .header .small-labels .label::before {
     color: #eee;
 }
