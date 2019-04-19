@@ -13,7 +13,7 @@
   },
   "homepage": "https://futa.moe/amphineko/",
   "scripts": {
-    "build": "webpack"
+    "build": "node_modules/.bin/webpack -p"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.8.1",

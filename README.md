@@ -8,9 +8,9 @@ Text contents are mainly located at `index.html`. To replace the texts and the p
 
 大部分的文本内容储存在 `index.html` 中，修改这个文件即可更改页面的主图片和文本。
 
-For furthermore modification, including color settings and layouts, check SASS files in `assets/stylesheets`. Don't forget `gulp`-ing to rebuild SASS files and reflect your modification.
+For furthermore modification, including color settings and layouts, check `index.scss` and `stylesheets/*.scss`. Don't forget to run `webpack` to rebuild SASS files and reflect your modification.
 
-若要进行更进一步的修改（如配色方案与页面布局），请编辑 `assets/stylesheets` 中的 SASS 文件。完事了别忘记 `gulp` 一下来重新编译 SASS 使更改生效。
+若要进行更进一步的修改（如配色方案与页面布局），请编辑 `index.scss` 与 `stylesheets/*.scss`。完事了别忘记 `webpack` 一下来重新编译 SASS 使更改生效。
 
 ## build
 
@@ -30,3 +30,7 @@ You may check your `NODE_ENV` before executing `npm install .` to ensure `devDep
 `install` might be pretty hard for Windows users who have poor connections to GitHub (for some well-known reasons), while `npm` is trying to fetch `node-sass-binaries` on GitHub.
 
 直接访问 GitHub 有困难的 Windows 用户在 `install` 时，可能会遇到获取 GitHub 上的 `node-sass-binaries` 导致的问题。
+
+```
+npm set sass_binary_site https://npm.taobao.org/mirrors/node-sass
+```
