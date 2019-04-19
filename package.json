@@ -16,6 +16,7 @@
     "build": "webpack"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.8.1",
     "browser-sync": "^2.26.3",
     "browser-sync-webpack-plugin": "^2.2.2",
     "css-loader": "^2.1.1",
@@ -28,6 +29,7 @@
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "unsemantic": "^1.2.3",
-    "webpack": "^4.29.6"
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
   }
 }
