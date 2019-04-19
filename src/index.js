@@ -1,2 +1,2 @@
-require('html-loader!./index.html')
-require('sass-loader?name=[name].[ext]!./assets/stylesheets/index.scss')
+require('./index.html')
+require('file-loader?name=[path][name].[ext]!./assets/images/amphineko.png')

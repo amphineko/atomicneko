@@ -1,19 +1,15 @@
-@import "fontawesome/fontawesome.scss";
-@import "fontawesome/brands.scss";
-@import "fontawesome/regular.scss";
-@import "fontawesome/solid.scss";
-@import "../../../node_modules/unsemantic/assets/sass/unsemantic-grid-responsive.scss";
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+@import "~unsemantic/assets/sass/unsemantic-grid-responsive.scss";
 
-@import "footer.scss";
-@import "header.scss";
-@import "identities.scss";
-@import "intro.scss";
-@import "labels.scss";
-
-@import "chem-elements.scss";
+@import "stylesheets/chem-elements.scss";
+@import "stylesheets/footer.scss";
+@import "stylesheets/header.scss";
+@import "stylesheets/identities.scss";
+@import "stylesheets/intro.scss";
+@import "stylesheets/labels.scss";
 
 body {
-    background: url('../images/header-background.svg') #466685;
+    background: url('./assets/images/header-background.svg') #466685;
     background-size: cover;
 
     font-size: 1em;
