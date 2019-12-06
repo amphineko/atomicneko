@@ -1,69 +1,45 @@
-.small-labels {
+.label-group {
     display: inline-block;
-}
-
-.small-labels a {
-    text-decoration: none;
-}
-
-.small-labels .label {
-    color: #333;
-    font-weight: 300;
-    padding: 0.5em 0;
-    vertical-align: bottom;
-}
-
-.small-labels .label .content {
-    color: #555;
-}
-
-.small-labels .label .link {
-    color: #0063cc;
-}
-
-.small-labels .group, .small-labels .label {
-    display: inline-block;
+    margin: 1.25em 0;
+    padding: 0 0.25em;
     position: relative;
 }
 
-.small-labels .group>*, .small-labels>* {
-    vertical-align: middle;
-}
-
-.small-labels .label>* {
-    margin-right: .25em;
-}
-
-.small-labels .group .label  {
-    margin: 0;
-}
-
-.small-labels>.group, .small-labels>.label {
-    $small-label-group-padding-left: 0.75em;
-
-    background: #eee;
-    border-radius: 0.35em;
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
-    box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, 0.1);
-    line-height: 1em;
-    margin: 0.5em;
-    margin-left: 0;
-    padding-left: $small-label-group-padding-left;
-    padding-right: $small-label-group-padding-left;
-}
-
-.small-labels>.group.alt, .small-labels>.label.alt {
-    margin-top: 1.75em;
-}
-
-/* label alt text */
-
-.small-labels .group.alt::before, .small-labels .label.alt::before {
-    content: attr(data-alt);
+.label-group .header {
+    color: white;
+    display: block;
     font-size: 0.8em;
     left: 0;
+    padding: 0;
     position: absolute;
-    text-shadow: 2px 2px 4px rgba(0,0,0,.25);
+    text-shadow: 0 0 0.1em rgba(0, 0, 0, 0.25);
     top: -1.75em;
+}
+
+.label-group .header.alt {
+    color: #333;
+}
+
+.label-group .label {
+    background: #eee;
+    box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, 0.1);
+    color: #333;
+    display: inline-block;
+    line-height: 2.2em;
+    padding: 0 0.6em;
+}
+
+.label-group .label:last-child {
+    $radius: 0.5em;
+
+    border-bottom-right-radius: $radius;
+    border-top-right-radius: $radius;
+}
+
+.label-group a.label {
+    text-decoration: none;
+}
+
+.label-group .label i {
+    margin-right: 0.25em;
 }
