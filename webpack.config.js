@@ -1,13 +1,22 @@
 const path = require('path')
 
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = (env, argv) => {
     const isProduction = argv.mode === 'production'
 
+    console.log(`Using mode ${isProduction ? 'PRODUCTION' : 'DEVELOPMENT'}`)
+
     return {
         context: path.resolve(__dirname, 'src'),
+
+        devServer: {
+            contentBase: path.resolve(__dirname, 'dist'),
+            port: 3100,
+        },
+
+        devtool: 'inline-source-map',
 
         mode: isProduction ? 'production' : 'development',
 
@@ -71,11 +80,16 @@ module.exports = (env, argv) => {
             path: path.resolve(__dirname, 'dist'),
         },
 
-        plugins: [
-            new BrowserSyncPlugin({
-                host: 'localhost',
-                server: { baseDir: ['dist'] },
-            })
-        ],
+        plugins: Array.prototype.concat([
+            new CleanWebpackPlugin(),
+        ], isProduction
+            ? []
+            : [
+                new BrowserSyncPlugin({
+                    host: 'localhost',
+                    open: false,
+                    proxy: 'http://localhost:3100/',
+                }),
+            ])
     }
 }
