@@ -12,11 +12,17 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      with:
+        persist-credentials: false
+
     - name: Invoke Webpack build
       run: |
         npm install .
         npm run build
+
     - name: Invoke Deployment
       env:
-        BUILD_DIR: dist
-      uses: maxheld83/ghpages@v0.2.1
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: dist
+      uses: JamesIves/github-pages-deploy-action@3.2.1
