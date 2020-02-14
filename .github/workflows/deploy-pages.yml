@@ -1,0 +1,28 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: 
+      - master
+      - deploy-action
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        persist-credentials: false
+
+    - name: Invoke Webpack build
+      run: |
+        npm install .
+        npm run build
+
+    - name: Invoke Deployment
+      with:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: dist
+      uses: JamesIves/github-pages-deploy-action@3.2.1
