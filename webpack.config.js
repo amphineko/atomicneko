@@ -1,95 +1,63 @@
 const path = require('path')
 
-const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-module.exports = (env, argv) => {
-    const isProduction = argv.mode === 'production'
+module.exports = {
+    context: path.resolve(__dirname, 'src'),
 
-    console.log(`Using mode ${isProduction ? 'PRODUCTION' : 'DEVELOPMENT'}`)
+    devServer: {
+        contentBase: path.resolve(__dirname, 'dist')
+    },
 
-    return {
-        context: path.resolve(__dirname, 'src'),
+    devtool: 'inline-source-map',
 
-        devServer: {
-            contentBase: path.resolve(__dirname, 'dist'),
-            port: 3100,
-        },
+    entry: {
+        index: './index.js',
+    },
 
-        devtool: 'inline-source-map',
-
-        mode: isProduction ? 'production' : 'development',
-
-        entry: {
-            index: './index.js',
-        },
-
-        module: {
-            rules: [
-                {
-                    test: /\.(jpg|png|svg)$/,
-                    include: [
-                        path.resolve(__dirname, 'src')
-                    ],
-                    use: [
-                        isProduction ?
-                            'file-loader?name=[path][name].[contenthash:8].[ext]' :
-                            'file-loader?name=[path][name].[ext]'
-                    ],
-                },
-                {
-                    test: /\.(eot|svg|ttf|woff2?)$/,
-                    include: [
-                        path.resolve(__dirname, 'node_modules')
-                    ],
-                    use: [
-                        isProduction ?
-                            'file-loader?name=assets/webfonts/[name].[contenthash:8].[ext]' :
-                            'file-loader?name=assets/webfonts/[name].[ext]'
-                    ],
-                },
-                {
-                    test: /\.(html)$/,
-                    use: [
-                        'file-loader?name=[name].[ext]',
-                        'extract-loader',
-                        'html-loader?interpolate',
-                    ],
-                },
-                {
-                    test: /\.(c|sa|sc)ss$/,
-                    use: [
-                        isProduction ?
-                            'file-loader?name=[name].[contenthash:8].css' :
-                            'file-loader?name=[name].css',
-                        'extract-loader',
-                        {
-                            loader: 'css-loader',
-                            options: {
-                                importLoaders: 1,
-                            },
+    module: {
+        rules: [
+            {
+                test: /\.(jpg|png|svg)$/,
+                loader: 'file-loader',
+                options: {
+                    name: 'assets/images/[name].[contenthash:8].[ext]'
+                }
+            },
+            {
+                test: /\.(eot|svg|ttf|woff2?)$/,
+                loader: 'file-loader',
+                options: {
+                    name: 'assets/webfonts/[name].[contenthash:8].[ext]'
+                }
+            },
+            {
+                test: /\.(c|sa|sc)ss$/,
+                use: [
+                    'file-loader?name=[name].[contenthash:8].css',
+                    'extract-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            importLoaders: 1,
                         },
-                        'sass-loader',
-                    ],
-                },
-            ],
-        },
+                    },
+                    'sass-loader',
+                ],
+            },
+        ],
+    },
 
-        output: {
-            filename: '[name].[contenthash:8].js',
-            path: path.resolve(__dirname, 'dist'),
-        },
+    output: {
+        filename: '[name].[contenthash:8].js',
+        path: path.resolve(__dirname, 'dist'),
+    },
 
-        plugins: Array.prototype.concat([
-            new CleanWebpackPlugin(),
-        ], isProduction
-            ? []
-            : [
-                new BrowserSyncPlugin({
-                    host: 'localhost',
-                    open: false,
-                    proxy: 'http://localhost:3100/',
-                }),
-            ])
-    }
+    plugins: [
+        new CleanWebpackPlugin(),
+        new HtmlWebpackPlugin({
+            template: 'index.html'
+        })
+    ]
 }
