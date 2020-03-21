@@ -32,13 +32,18 @@ module.exports = {
                     'extract-loader',
                     {
                         loader: 'css-loader',
-                        options: { sourceMap: true }
+                        options: {
+                            importLoaders: 1
+                        }
                     },
                     {
-                        loader: 'resolve-url-loader',
+                        loader: 'postcss-loader',
                         options: {
-                            engine: 'postcss',
-                            sourceMap: true
+                            ident: 'postcss',
+                            plugins: () => [
+                                require('cssnano')({ preset: 'default' }),
+                                require('postcss-preset-env')()
+                            ]
                         }
                     }
                 ],
