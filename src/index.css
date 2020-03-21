@@ -4,7 +4,7 @@
 @import '~@fortawesome/fontawesome-pro/css/light.css';
 @import '~@fortawesome/fontawesome-pro/css/regular.css';
 @import '~@fortawesome/fontawesome-pro/css/solid.css';
-@import '~unsemantic/assets/sass/unsemantic-grid-responsive.scss';
+@import '~unsemantic/assets/stylesheets/unsemantic-grid-responsive.css';
 
 @import 'stylesheets/chem-elements.css';
 @import 'stylesheets/footer.css';
