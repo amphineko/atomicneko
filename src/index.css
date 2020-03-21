@@ -86,4 +86,9 @@ html {
     .intro .block .split {
         padding: 0 0.5em;
     }
+
+    .intro p {
+        border-left: none;
+        padding: 0.2em;
+    }
 }
