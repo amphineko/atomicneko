@@ -18,7 +18,6 @@
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.11.2",
-    "@fortawesome/fontawesome-pro": "^5.12.1",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.4.2",
     "cssnano": "^4.1.10",
