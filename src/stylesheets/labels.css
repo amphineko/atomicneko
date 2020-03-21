@@ -30,17 +30,12 @@
     padding: 0 0.6em;
 }
 
-.label-group .label:last-child {
-    $radius: 0.5em;
-
-    border-bottom-right-radius: $radius;
-    border-top-right-radius: $radius;
-}
-
 .label-group a.label {
     text-decoration: none;
 }
 
 .label-group .label i {
+    font-size: 1.2em;
     margin-right: 0.25em;
+    vertical-align: -0.05em;
 }

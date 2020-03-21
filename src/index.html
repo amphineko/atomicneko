@@ -2,24 +2,23 @@
 <html>
 
 <head>
-    <link href="${require('./index.scss')}" rel="stylesheet">
+    <link href="${require('./index.css')}" rel="stylesheet">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
     <title>about amphineko</title>
 </head>
 
 <body>
     <div id="container">
         <div class="section header grid-container grid-parent">
-            <div class="split picture-container grid-30">
+            <div class="split picture-container grid-40">
                 <a href="${require('./assets/images/amphineko.png')}">
                     <img alt="picture of amphineko" class="picture"
                         src="${require('./assets/images/amphineko@1x.jpg')}">
                 </a>
             </div>
 
-            <div class="split grid-70">
+            <div class="split grid-60">
                 <div class="names">
                     <h1 class="name">
                         <span class="no-wrap">
@@ -43,7 +42,23 @@
                 <br />
 
                 <div class="label-group">
-                    <span class="header">project</span>
+                    <span class="header">education</span>
+                    <span class="label">
+                        <i aria-hidden="true" class="fas fa-university"></i>
+                        undergraduate
+                    </span>
+                </div>
+
+                <div class="label-group">
+                    <span class="header">major</span>
+                    <span class="label">
+                        <i aria-hidden="true" class="fas fa-university"></i>
+                        network engineering
+                    </span>
+                </div>
+
+                <div class="label-group">
+                    <span class="header">home-lab</span>
                     <span class="label">
                         <i aria-hidden="true" class="fas fa-box"></i>
                         Maeeko Laboratory
@@ -57,11 +72,9 @@
                         <span class="content">AS205058</span>
                     </a>
                     <a class="label" href="#">
-                        <span class="content"><del>AS396303</del></span>
+                        <span class="content"><small>AS396303</small></span>
                     </a>
                 </div>
-
-                <br />
 
                 <div class="label-group">
                     <span class="header">platforms</span>
@@ -77,102 +90,162 @@
                         <i aria-hidden="true" class="fab fa-windows"></i>
                     </span>
                 </div>
+            </div>
+        </div>
 
-                <div class="label-group">
-                    <span class="header">indents</span>
-                    <span class="label">
-                        <i aria-hidden="true" class="fas fa-i-cursor"></i>
-                        spaces
-                    </span>
+        <div class="section intro">
+            <h2><i aria-hidden="true" class="fa fa-chevron-right"></i>who am i?</h2>
+
+            <div class="block grid-container grid-parent">
+                <div class="split grid-50 mobile-grid-100">
+                    <p>
+                        Has experience in full-stack projects <small>(and DevOps)</small>.<br />
+                        Operating own Internet autonomous system.<br />
+                        Contact me if you're interested to hire me :D
+                    </p>
+                    <p>
+                        过去有全栈项目开发的经验 <small>(还是 DevOps)</small><br />
+                        拥有自己的 Internet 自治系统<br />
+                        如果你对我有兴趣的话，欢迎来招募我
+                    </p>
+                    <p>
+                        是一個討厭生活在沒有計劃當中的人，<br />
+                        喜歡進行完備的考量。
+                    </p>
+                </div>
+
+                <div class="split grid-50 mobile-grid-100">
+                    <figure class="identities">
+                        <figcaption>open-source</figcaption>
+                        <ul>
+                            <li>
+                                <a href="https://github.com/amphineko/">
+                                    <i aria-hidden="true" class="fab fa-github"></i>
+                                    <span class="label">GitHub</span>
+                                    <span class="fake-link">@amphineko</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </figure>
+
+                    <figure class="identities">
+                        <figcaption>social network</figcaption>
+                        <ul>
+                            <li class="shutdown">
+                                <a href="#">
+                                    <i aria-hidden="true" class="fab fa-google-plus"></i>
+                                    <span class="label">Google+</span>
+                                    <span class="fake-link">+amphineko</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/amphineko/">
+                                    <i aria-hidden="true" class="fab fa-twitter"></i>
+                                    <span class="label">Twitter</span>
+                                    <span class="fake-link">@amphineko</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://telegram.me/amphineko">
+                                    <i aria-hidden="true" class="fab fa-telegram"></i>
+                                    <span class="label">Telegram</span>
+                                    <span class="fake-link">@amphineko</span>
+                                </a>
+                            </li>
+                            <li class="shutdown">
+                                <a href="#">
+                                    <i aria-hidden="true" class="fab fa-weibo"></i>
+                                    <span class="text">weibo.com</span>
+                                    <span class="fake-link">[redacted]</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </figure>
                 </div>
             </div>
         </div>
 
         <div class="section intro">
-            <div class="block grid-container grid-parent">
-                <div class="split grid-50 mobile-grid-100">
-                    <p>
-                        <del>Cursed</del> Network Engineering student.<br />
-                        Has few experience in full-stack development.<br />
-                        Operating own autonomous system.<br />
-                        Contact me if you're interested to hire :D
-                    </p>
-                </div>
-
-                <div class="split grid-50 mobile-grid-100">
-                    <div class="label-group">
-                        <span class="header alt">open-source</span>
-                        <a class="label" href="https://github.com/amphineko">
-                            <i aria-hidden="true" class="fab fa-github"></i>
-                            <span class="title">GitHub</span>
-                            <span class="content">@amphineko</span>
-                        </a>
-                    </div>
-                    <div class="label-group">
-                        <span class="header alt">social</span>
-                        <a class="label" href="https://telegram.me/amphineko">
-                            <i aria-hidden="true" class="fab fa-telegram"></i aria-hidden="true">
-                            <span class="title">Telegram</span>
-                            <span class="content">@amphineko</span>
-                        </a>
-                        <a class="label" href="https://twitter.com/amphineko">
-                            <i aria-hidden="true" class="fab fa-twitter"></i>
-                            <span class="title">Twitter</span>
-                            <span class="content">amphineko</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
+            <h2><i aria-hidden="true" class="fa fa-chevron-right"></i>my playlist!</h2>
 
             <div class="block grid-container grid-parent">
                 <div class="split grid-50 mobile-grid-100">
                     <p>
-                        Music Game is LIFE!<br />
-                        Love FPS and Simulation Games.<br />
-                        Ingress Mission Collector.
+                        ardently love fps, simulation and avg games<br />
+                        rhythm game is LIFE!<br />
+                        ingress <small>(mission collection only)</small> agent
+                    </p>
+                    <p>
+                        热衷于第一人称射击、模拟和文字冒险游戏<br />
+                        音乐节奏是人生不可或缺的一部分！<br />
+                        还是一个 Ingress <small>(仅限任务收集)</small> 探员
+                    </p>
+                    <p>
+                        <del>dream to be railroad driver and civil aviation pilot</del>
+                        <br />
+                        <del>曾经梦想过成为机车司机和民航飞行员</del>
                     </p>
                 </div>
 
                 <div class="split grid-50 mobile-grid-100">
+                    <figure class="identities">
+                        <figcaption>profiles</figcaption>
+                        <ul>
+                            <li>
+                                <a href="https://osu.ppy.sh/users/1344051">
+                                    <i aria-hidden="true" class="fab fa-accessible-icon"></i>
+                                    <span class="label">osu!</span>
+                                    <span class="fake-link">Rukatan</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://steamcommunity.com/id/amphineko/">
+                                    <i aria-hidden="true" class="fab fa-steam"></i>
+                                    <span class="label">Steam</span>
+                                    <span class="fake-link">白い桃</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </figure>
+
                     <div class="label-group">
-                        <span class="header alt">music game</span>
+                        <span class="header alt">fps</span>
+
+                        <span class="label">Counter-Strike Global Offensive</span>
+                        <span class="label">Rainbow Six Siege</span>
+                    </div>
+
+                    <div class="label-group">
+                        <span class="header alt">simulation</span>
+
                         <span class="label">
-                            <i aria-hidden="true" class="fas fa-compact-disc"></i>
-                            Arcade: NekoSauc
+                            Cities: Skylines
                         </span>
                         <span class="label">
-                            <i aria-hidden="true" class="fab fa-accessible-icon"></i>
-                            osu! Rukatan
+                            Train Simulator<small>s</small>
+                        </span>
+                        <span class="label">
+                            電車でGO!
+                        </span>
+                        <span class="label">
+                            FS 9 & FS X
+                        </span>
+                        <span class="label">
+                            X-Plane
                         </span>
                     </div>
 
                     <div class="label-group">
-                        <span class="header alt">Steam</span>
-                        <span class="label">
-                            <i aria-hidden="true" class="fab fa-steam"></i>
-                            NekoSauce
-                        </span>
-                        <span class="label">
-                            CS:GO
-                        </span>
-                    </div>
+                        <span class="header alt">rhythm</span>
 
-                    <div class="label-group">
-                        <span class="header alt">Uplay</span>
                         <span class="label">
-                            <i aria-hidden="true" class="fas fa-user"></i aria-hidden="true">
-                            AtomicAkarin
+                            BEMANI (iidx, jubeat, sdvx, etc.)
                         </span>
                         <span class="label">
-                            R6:S
+                            SEGA (chunithm, etc.)
                         </span>
-                    </div>
-
-                    <div class="label-group">
-                        <span class="header alt">Niantic</span>
                         <span class="label">
-                            <i aria-hidden="true" class="fas fa-plane"></i>
-                            Ingress <del>[CODENAME REDACTED]</del>
+                            TAITO (groove coaster)
                         </span>
                     </div>
                 </div>
@@ -191,7 +264,7 @@
             </a>
             <div class="copyright">
                 <i aria-hidden="true" class="fas fa-exclamation-triangle"></i>
-                Copyright © 2015-2019 amphineko. Illustrations have their own licenses.
+                Copyright © 2015-2020 amphineko. Illustrations have their own licenses.
             </div>
         </div>
     </div>

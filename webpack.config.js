@@ -19,17 +19,10 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(jpg|png|svg)$/,
+                test: /\.(eot|jpg|png|svg|ttf|woff2?)$/,
                 loader: 'file-loader',
                 options: {
-                    name: 'assets/images/[name].[contenthash:8].[ext]'
-                }
-            },
-            {
-                test: /\.(eot|svg|ttf|woff2?)$/,
-                loader: 'file-loader',
-                options: {
-                    name: 'assets/webfonts/[name].[contenthash:8].[ext]'
+                    name: 'assets/[name].[contenthash:8].[ext]'
                 }
             },
             {
@@ -40,10 +33,19 @@ module.exports = {
                     {
                         loader: 'css-loader',
                         options: {
-                            importLoaders: 1,
-                        },
+                            importLoaders: 1
+                        }
                     },
-                    'sass-loader',
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            ident: 'postcss',
+                            plugins: () => [
+                                require('cssnano')({ preset: 'default' }),
+                                require('postcss-preset-env')()
+                            ]
+                        }
+                    }
                 ],
             },
         ],
