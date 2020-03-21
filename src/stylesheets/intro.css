@@ -33,7 +33,7 @@
 }
 
 .intro .label-group {
-    border-left: 0.2em solid #4600806b;
+    box-shadow: inset 0.25em 0 0.25em -0.25em #4600806b;
     margin-top: 2em;
     width: 100%;
 }
