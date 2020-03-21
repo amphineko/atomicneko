@@ -19,17 +19,10 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(jpg|png|svg)$/,
+                test: /\.(eot|jpg|png|svg|ttf|woff2?)$/,
                 loader: 'file-loader',
                 options: {
-                    name: 'assets/images/[name].[contenthash:8].[ext]'
-                }
-            },
-            {
-                test: /\.(eot|svg|ttf|woff2?)$/,
-                loader: 'file-loader',
-                options: {
-                    name: 'assets/webfonts/[name].[contenthash:8].[ext]'
+                    name: 'assets/[name].[contenthash:8].[ext]'
                 }
             },
             {
@@ -39,11 +32,15 @@ module.exports = {
                     'extract-loader',
                     {
                         loader: 'css-loader',
-                        options: {
-                            importLoaders: 1,
-                        },
+                        options: { sourceMap: true }
                     },
-                    'sass-loader',
+                    {
+                        loader: 'resolve-url-loader',
+                        options: {
+                            engine: 'postcss',
+                            sourceMap: true
+                        }
+                    }
                 ],
             },
         ],
