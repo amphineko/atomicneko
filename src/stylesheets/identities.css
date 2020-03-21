@@ -29,14 +29,14 @@ figure.identities ul li a {
     display: block;
     font-size: 1.1em;
     line-height: 1.75em;
-    padding: 0.5em 1em;
+    padding: 0.5em 0.25em;
     text-decoration: none;
-    transition-duration: .5s;
+    transition-duration: .25s;
 }
 
 figure.identities ul li a:hover {
-    background-color: rgba(0, 0, 0, .015);
-    box-shadow: 0.1em 0.1em 0.25em #01697c1a, -0.1em -0.1em 0.25em #01697c26;
+    background-color: rgba(1, 105, 124, .01);
+    box-shadow: inset 0 -0.5em 0.5em -0.5em rgba(1, 105, 124, .1);
 }
 
 figure.identities ul li a i {
@@ -53,16 +53,20 @@ figure.identities ul li a .fake-link {
 /* shutdown */
 
 figure.identities ul li.shutdown a {
-    background: rgba(0, 0, 0, 0.1);
     cursor: not-allowed;
     text-decoration: line-through;
 }
 
 figure.identities ul li.shutdown a:hover {
-    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 -0.5em 0.5em -0.5em #C93756;
     color: #ddd;
 }
 
 figure.identities ul li.shutdown a .fake-link {
     text-decoration: line-through;
+    transition-duration: .25s;
+}
+
+figure.identities ul li.shutdown a:hover .fake-link {
+    color: #ddd;
 }
