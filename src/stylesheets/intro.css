@@ -32,22 +32,25 @@
     padding: 0.5em 0.5em;
 }
 
-.intro figure.identities + .label-group {
+.intro .label-group {
+    border-left: 0.25em solid #006080;
     margin-top: 2em;
+    width: 100%;
 }
 
 .intro .label-group .header.alt {
     color: #777;
-    margin-left: 1.5em;
+    margin-left: 1em;
+}
+
+.intro .label-group .header.alt .fa-tag {
+    transform: rotate(-15deg);
+    margin-right: 0.5em;
 }
 
 .intro .label-group .label {
     background: transparent;
-    box-shadow: 0 0 0.1em rgba(0, 0, 0, 0.25);
+    box-shadow: inset 0 -.25em .25em -.25em rgba(1, 105, 124, 0.5);
+    margin: 0 0.25em;
     transition-duration: .5s;
-}
-
-.intro .label-group .label:hover {
-    background-color: rgba(0, 0, 0, .015);
-    box-shadow: 0.1em 0.1em 0.25em #01697c1a, -0.1em -0.1em 0.25em #01697c26;
 }
