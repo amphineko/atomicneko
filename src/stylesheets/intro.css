@@ -33,24 +33,28 @@
 }
 
 .intro .label-group {
-    border-left: 0.25em solid #006080;
+    border-left: 0.2em solid #4600806b;
     margin-top: 2em;
     width: 100%;
 }
 
 .intro .label-group .header.alt {
     color: #777;
-    margin-left: 1em;
+    font-size: 1em;
+    padding: 0 0.25em;
 }
 
 .intro .label-group .header.alt .fa-tag {
-    transform: rotate(-15deg);
-    margin-right: 0.5em;
+    font-size: 1.21em;
+    margin-right: 0.5ch;
+    text-align: center;
+    width: 1.5em;
 }
 
 .intro .label-group .label {
     background: transparent;
     box-shadow: inset 0 -.25em .25em -.25em rgba(1, 105, 124, 0.5);
     margin: 0.25em 0.25em;
+    padding: 0 0.25em;
     transition-duration: .5s;
 }
