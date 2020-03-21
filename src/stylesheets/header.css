@@ -1,13 +1,23 @@
 .section.header {
-    background: rgba(0, 0, 0, 0.075);
-    // box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, 0.125); 
-    // margin-top: -3.2em;
+    background: url(../assets/images/badcable.png) rgba(0, 0, 0, 0.75);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: auto 40%;
     padding-top: 1.6em;
     padding-bottom: 1.4em;
 }
 
 .section.header .split {
     padding: 0 1em;
+}
+
+.section.header .splitter {
+    display: block;
+    border-left: 1em solid rgba(0, 0, 0, 0.15);
+    width: 1em;
+
+    /* this should be calculated from right panel height */
+    height: 24em;
 }
 
 .section.header .name {
