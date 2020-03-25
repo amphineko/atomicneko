@@ -13,8 +13,10 @@
         <div class="section header grid-container grid-parent">
             <div class="split picture-container grid-40">
                 <a href="${require('./assets/images/amphineko.png')}">
-                    <img alt="picture of amphineko" class="picture"
-                        src="${require('./assets/images/amphineko@1x.jpg')}">
+                    <picture class="picture">
+                        <source type="image/webp" srcset="${require('./assets/images/amphineko@1x.webp')}" />
+                        <img src="${require('./assets/images/amphineko@1x.jpg')}" alt="picture of amphineko" />
+                    </picture>
                 </a>
             </div>
 

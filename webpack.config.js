@@ -19,7 +19,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(eot|jpg|png|svg|ttf|woff2?)$/,
+                test: /\.(eot|jpg|png|svg|ttf|webp|woff2?)$/,
                 loader: 'file-loader',
                 options: {
                     name: 'assets/[name].[contenthash:8].[ext]'
