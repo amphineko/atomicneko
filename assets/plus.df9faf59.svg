@@ -1,0 +1,32 @@
+<svg viewBox="0 0 256 256" width="256" height="256" 
+    xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <filter id="noise" x="0%" y="0%" width="100%" height="100%">
+            <feTurbulence baseFrequency="0.01 0.5" result="NOISE" numOctaves="2" />
+            <feDisplacementMap in="SourceGraphic" in2="NOISE" scale="16" xChannelSelector="R" yChannelSelector="R" />
+        </filter>
+
+        <pattern id="ShapeT" x="0" y="0" width="64" height="64">
+            <path d="M48 28 L16 28 L16 36 L28 36 L28 52 L36 54 L36 36 L48 36 Z" fill="#006C7F" />
+        </pattern>
+
+        <pattern id="ShapeTri" x="0" y="0" width="64" height="64">
+            <path d="M16 48 L48 32 L32 16 Z" fill="#1D697C" />
+        </pattern>
+
+        <pattern id="Tile" x="0" y="0" width="128" height="128" patternUnits="userSpaceOnUse">
+            <rect fill="url(#ShapeT)" height="64" width="64" x="0" y="0">
+                <!-- <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="360 32 32" to="0 32 32" dur="16s" repeatCount="indefinite"/> -->
+            </rect>
+
+            <rect fill="url(#ShapeTri)" height="64" width="64" x="64" y="64">
+                <!-- <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 96 96" to="360 96 96" dur="8s" repeatCount="indefinite"/> -->
+            </rect>
+        </pattern>
+    </defs>
+
+    <g transform="rotate(-15)">
+        <rect fill="url(#Tile)" height="128" width="128" x="0" y="0" />
+        <rect fill="url(#Tile)" height="128" width="128" x="128" y="128" />
+    </g>
+</svg>
