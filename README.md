@@ -20,21 +20,13 @@ For further modifications, including color settings, background images, and layo
 
 ## warning
 
-This repository contains copyright content, including the profile picture `amphineko.png`, `badcable.png`, etc.
-
-For example, this following image is shown on the bottom-right of the header:
-
-![badcable.png](https://github.com/amphineko/amphineko/blob/39830d5c28537bd2f76067e1793f26bc121f38e1/src/assets/images/badcable.png?raw=true)
-
-These assets are specially licensed to the repository owner only.
+This repository contains copyright content, including the profile picture `amphineko.png`, `badcable.png`, etc. These assets are specially licensed to the repository owner only.
 
 You should replace these assets with your images, all of them, before deploying to your websites.
 
 ---
 
-请注意，本库中包含版权内容，包括 `amphineko.png`、`badcable.png` 等。
-
-如上例所给出的显示于页面头部右下角的图片，这些图片都是特别而仅授权给本代码库拥有者使用的。
+请注意，本库中包含版权内容，包括 `amphineko.png`、`badcable.png` 等。这些图片都是特别而仅授权给本代码库拥有者使用的。
 
 你应该在部署到你的网站或分发之前，将这些所有的版权图片替换为你自己的图片。
 

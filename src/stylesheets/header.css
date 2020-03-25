@@ -1,8 +1,4 @@
 .section.header {
-    background: url(../assets/images/badcable.png) rgba(0, 0, 0, 0.75);
-    background-position: bottom right;
-    background-repeat: no-repeat;
-    background-size: auto 40%;
     padding-top: 1.6em;
     padding-bottom: 1.4em;
 }
