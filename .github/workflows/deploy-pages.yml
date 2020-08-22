@@ -25,3 +25,7 @@ jobs:
         BRANCH: gh-pages
         FOLDER: dist
       uses: JamesIves/github-pages-deploy-action@3.2.1
+    - name: Upload reports
+      run: |
+        export CODECOV_TOKEN="token"
+        bash <(curl -s https://codecov.io/bash)
