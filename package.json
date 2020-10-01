@@ -31,7 +31,7 @@
     "style-loader": "^1.2.1",
     "unsemantic": "^1.2.3",
     "url-loader": "^4.1.0",
-    "webpack": "^4.44.1",
+    "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^5.1.4"
