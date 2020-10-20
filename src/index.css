@@ -38,9 +38,13 @@ html {
     background: url(./assets/images/container-background.svg) grey;
     background-size: cover;
     box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, 0.125);
-    padding: 1em 0;
+    padding-top: 1em;
     margin: 0 auto;
     max-width: 64em;
+}
+
+.section.intro {
+    background: rgba(255, 255, 255, 0.95);
 }
 
 .no-wrap {

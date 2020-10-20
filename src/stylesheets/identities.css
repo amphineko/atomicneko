@@ -38,12 +38,11 @@ figure.identities ul li a {
     line-height: 1.75em;
     padding: 0.5em 0.25em;
     text-decoration: none;
-    transition-duration: .25s;
+    transition-duration: 0.25s;
 }
 
 figure.identities ul li a:hover {
-    background-color: rgba(1, 105, 124, .01);
-    box-shadow: inset 0 -0.5em 0.5em -0.5em rgba(1, 105, 124, .1);
+    background-color: rgba(1, 105, 124, 0.05);
 }
 
 figure.identities ul li a i {
@@ -57,23 +56,16 @@ figure.identities ul li a .fake-link {
     float: right;
 }
 
-/* shutdown */
+/* shutdown & redacted */
 
-figure.identities ul li.shutdown a {
-    cursor: not-allowed;
-    text-decoration: line-through;
-}
-
-figure.identities ul li.shutdown a:hover {
-    box-shadow: inset 0 -0.5em 0.5em -0.5em #C93756;
-    color: #ddd;
-}
-
+figure.identities ul li.shutdown a .label,
 figure.identities ul li.shutdown a .fake-link {
     text-decoration: line-through;
-    transition-duration: .25s;
+    transition-duration: 0.25s;
 }
 
+figure.identities ul li.shutdown a:hover .label,
 figure.identities ul li.shutdown a:hover .fake-link {
     color: #ddd;
+    text-decoration-color: #c93756;
 }
