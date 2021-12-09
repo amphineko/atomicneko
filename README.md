@@ -1,5 +1,11 @@
 # ~/amphineko
 
+👋 There's also an ongoing development branch called `next`.
+
+I'm working on moving to next.js and React, to support more features like server-side dynamic contents and more.
+
+---
+
 This repository is the repository of my homepage (https://futa.moe/amphineko/) that can be used as a template.
 
 Visit https://amphineko.github.io/amphineko/ for a live deployment of the `master` branch.
