@@ -6,6 +6,8 @@ This branch is still in development. I'm currently working on moving to next.js 
 
 In the future, it will support dynamic server-side contents. The main goal is to fetch some stats of linked accounts, which are not fetch-able from the browser due to CORS issues.
 
+See https://atomicneko-next.vercel.app/ for the latest build of this branch.
+
 ---
 
 This repository is the repository of my homepage (https://futa.moe/amphineko/) that can be used as a template.
