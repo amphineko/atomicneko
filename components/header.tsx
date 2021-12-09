@@ -1,57 +1,62 @@
-import { PropsWithChildren, ReactNode } from 'react'
+import { PropsWithChildren } from 'react'
 
 export const ProfileNameStandout = ({
     backgroundColor,
     children,
     hoverColor,
-    hoverContent,
+    hoverRuby,
     ruby,
 }: PropsWithChildren<{
     backgroundColor: string
     hoverColor: string
-    hoverContent?: ReactNode
-    ruby: string
-}>) => (
-    <>
-        <a aria-role="none" className="standout" href="#">
-            {children}
-        </a>
-        <style jsx>{`
-            .standout {
-                background: ${backgroundColor};
-                border-radius: 0.25em;
-                box-shadow: 0 0 0.1em 0.1em rgba(0 0 0 0.05);
-                color: white;
-                display: inline-block;
-                padding: 0.1em;
-                position: relative;
-                text-decoration: none;
-                transition-duration: 0.5s;
-            }
+    hoverRuby?: string
+    ruby?: string
+}>) => {
+    ruby = ruby || ''
+    hoverRuby = hoverRuby || ruby || ''
 
-            .standout::after {
-                color: #7f7f7f;
-                content: '${ruby || ''}';
-                display: block;
-                font-size: 0.5em;
-                position: absolute;
-                top: 2.5em;
-                transition-duration: 0.5s;
-            }
+    return (
+        <>
+            <a aria-role="none" className="standout" href="#">
+                {children}
+            </a>
+            <style jsx>{`
+                .standout {
+                    background: ${backgroundColor};
+                    border-radius: 0.25em;
+                    box-shadow: 0 0 0.1em 0.1em rgba(0 0 0 0.05);
+                    color: white;
+                    display: inline-block;
+                    padding: 0.1em;
+                    position: relative;
+                    text-decoration: none;
+                    transition-duration: 0.5s;
+                }
 
-            .standout:hover {
-                background: ${hoverColor};
-            }
+                .standout::after {
+                    color: #7f7f7f;
+                    content: '${ruby || ''}';
+                    display: block;
+                    font-size: 0.5em;
+                    position: absolute;
+                    top: 2.5em;
+                    transition-duration: 0.5s;
+                }
 
-            .standout:hover::after {
-                color: #aaa;
-                content: '${hoverContent || ruby || ''}';
-            }
-        `}</style>
-    </>
-)
+                .standout:hover {
+                    background: ${hoverColor};
+                }
 
-export const ProfileName = ({ children }: PropsWithChildren<{}>) => (
+                .standout:hover::after {
+                    color: #aaa;
+                    content: '${hoverRuby}';
+                }
+            `}</style>
+        </>
+    )
+}
+
+export const ProfileName = ({ children }: PropsWithChildren<unknown>) => (
     <span className="profile-name">
         {children}
         <style jsx>{`
@@ -84,7 +89,7 @@ export const HeaderSection = () => (
                 amphi
                 <ProfileNameStandout
                     backgroundColor="hsla(0, 100%, 82%, 0.25)"
-                    hoverContent="ね"
+                    hoverRuby="ね"
                     hoverColor="hsla(0, 100%, 82%, 0.75)"
                     ruby="10"
                 >
