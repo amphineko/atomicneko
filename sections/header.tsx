@@ -76,12 +76,8 @@ export const ProfileName = ({ children }: PropsWithChildren<unknown>) => (
     </div>
 )
 
-export const HeaderSection = ({
-    breakpoint,
-    children,
-    profileName,
-}: PropsWithChildren<{ breakpoint?: string; profileName: ReactNode }>) => (
-    <div className="row">
+export const Header = ({ children, profileName }: PropsWithChildren<{ profileName: ReactNode }>) => (
+    <header className="row">
         <div className="column left-side">
             <a className="head-picture-container" href="/assets/images/amphineko.png">
                 <img alt="head picture of amphineko" className="head-picture" src="/assets/images/amphineko.png" />
@@ -95,15 +91,16 @@ export const HeaderSection = ({
         <style jsx>{`
             .row {
                 align-items: center;
+                background: rgba(0, 0, 0, 0.8);
+                border-top-left-radius: 1rem;
+                box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.25);
                 display: flex;
                 flex-wrap: wrap;
-                margin: 0 auto;
-                max-width: 48em;
             }
 
             .column {
                 box-sizing: border-box;
-                padding: 1em;
+                padding: 2rem;
             }
 
             .left-side {
@@ -112,13 +109,6 @@ export const HeaderSection = ({
 
             .right-side {
                 max-width: 60%;
-            }
-
-            @media (max-width: ${breakpoint ?? '36em'}) {
-                .left-side,
-                .right-side {
-                    max-width: 100%;
-                }
             }
 
             .head-picture {
@@ -135,5 +125,5 @@ export const HeaderSection = ({
                 overflow: hidden;
             }
         `}</style>
-    </div>
+    </header>
 )

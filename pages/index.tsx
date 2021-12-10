@@ -1,10 +1,13 @@
+import { FaCompactDisc, FaGithub, FaGooglePlusG, FaSteam, FaTelegramPlane, FaTwitter, FaWeibo } from 'react-icons/fa'
 import { IoCloud, IoLanguage, IoLink, IoSchool } from 'react-icons/io5'
+import { Account, AccountList, Description, Paragraph } from '../components/blocks'
 import { LabelGroup, LabelItem } from '../components/labels'
-import { HeaderSection, ProfileNameStandout } from '../sections/header'
+import { Block, Column } from '../sections/block'
+import { Header, ProfileNameStandout } from '../sections/header'
 
 const IndexPage = () => (
     <div className="container">
-        <HeaderSection
+        <Header
             profileName={
                 <>
                     amphi
@@ -58,14 +61,78 @@ const IndexPage = () => (
                     </LabelItem>
                 </LabelGroup>
             </div>
-        </HeaderSection>
+        </Header>
 
-        <div className="placeholder"></div>
+        <Block>
+            <Column>
+                <Description>
+                    {/* <Paragraph>who is amphineko?</Paragraph> */}
+                    <Paragraph>Passionate full-stack software developer and open-source contributor.</Paragraph>
+                    <Paragraph>Amautar network engineer operating own Internet autonomous systems.</Paragraph>
+                </Description>
+            </Column>
+            <Column>
+                <AccountList title="open-source">
+                    <Account href="https://github.com/amphineko/" icon={FaGithub} title="GitHub">
+                        amphineko
+                    </Account>
+                </AccountList>
+                <AccountList title="social network">
+                    <Account href="#" icon={FaGooglePlusG} strikethrough title="Google+">
+                        [unavailable]
+                    </Account>
+                    <Account href="https://telegram.me/amphineko" icon={FaTelegramPlane} title="Telegram">
+                        @amphineko
+                    </Account>
+                    <Account href="https://twitter.com/amphineko/" icon={FaTwitter} title="Twitter">
+                        @amphineko
+                    </Account>
+                    <Account href="#" icon={FaWeibo} strikethrough title="Weibo">
+                        [redacted]
+                    </Account>
+                </AccountList>
+            </Column>
+        </Block>
+
+        <Block>
+            <Column>
+                <Description>
+                    {/* <Paragraph>who is amphineko?</Paragraph> */}
+                    <Paragraph>
+                        ardently love fps, simulation and galgames
+                        <br />
+                        rhythm game is LIFE!
+                        <br />
+                        ingress (mission collection only) agent
+                    </Paragraph>
+                    <Paragraph>
+                        <del className="deleted">dream to be a civil aviation pilot</del>
+                    </Paragraph>
+                </Description>
+            </Column>
+            <Column>
+                <AccountList title="profiles">
+                    <Account href="https://osu.ppy.sh/users/1344051" icon={FaCompactDisc} title="osu!">
+                        Rukatan
+                    </Account>
+                    <Account href="https://steamcommunity.com/id/amphineko/" icon={FaSteam} title="Steam">
+                        1kar0s
+                    </Account>
+                </AccountList>
+            </Column>
+        </Block>
 
         <style jsx>{`
             .container {
+                background: url('/assets/images/background-header.svg') no-repeat;
+                background-color: #aaa;
+                background-size: cover;
+                border-top-left-radius: 1rem;
+                box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.25);
                 display: flex;
                 flex-direction: column;
+                max-width: 64em;
+                margin: 0 auto;
                 min-height: 100vh;
             }
 
@@ -73,7 +140,12 @@ const IndexPage = () => (
                 color: inherit;
                 text-decoration: none;
             }
+
+            .deleted {
+                color: #777;
+            }
         `}</style>
+
         <style jsx global>{`
             body {
                 background: url('/assets/images/background.svg') no-repeat;
@@ -83,7 +155,7 @@ const IndexPage = () => (
                     'STHeiti Light', STXihei, '华文细黑', Heiti, '黑体', 'sans-serif';
                 margin: 0;
                 min-height: 100vh;
-                padding: 0;
+                padding: 1em 0;
             }
         `}</style>
     </div>
