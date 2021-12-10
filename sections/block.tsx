@@ -24,7 +24,7 @@ export const Block = ({ children }: PropsWithChildren<{ breakpoint?: string }>) 
             }
 
             .block {
-                margin-top: 0.5rem;
+                margin-top: 1rem;
             }
         `}</style>
     </>

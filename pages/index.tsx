@@ -1,8 +1,18 @@
-import { FaCompactDisc, FaGithub, FaGooglePlusG, FaSteam, FaTelegramPlane, FaTwitter, FaWeibo } from 'react-icons/fa'
-import { IoCloud, IoLanguage, IoLink, IoSchool } from 'react-icons/io5'
+import {
+    FaCompactDisc,
+    FaExternalLinkAlt,
+    FaGithub,
+    FaGooglePlusG,
+    FaSteam,
+    FaTelegramPlane,
+    FaTwitter,
+    FaWeibo,
+} from 'react-icons/fa'
+import { IoBulb, IoCloud, IoGitBranch, IoLanguage, IoLink, IoSchool } from 'react-icons/io5'
 import { Account, AccountList, Description, Paragraph } from '../components/blocks'
 import { LabelGroup, LabelItem } from '../components/labels'
 import { Block, Column } from '../sections/block'
+import { Footer, FooterParagraph } from '../sections/footer'
 import { Header, ProfileNameStandout } from '../sections/header'
 
 const IndexPage = () => (
@@ -69,6 +79,7 @@ const IndexPage = () => (
                     {/* <Paragraph>who is amphineko?</Paragraph> */}
                     <Paragraph>Passionate full-stack software developer and open-source contributor.</Paragraph>
                     <Paragraph>Amautar network engineer operating own Internet autonomous systems.</Paragraph>
+                    <Paragraph>Contact me if you&apos;re interested to hire me :D</Paragraph>
                 </Description>
             </Column>
             <Column>
@@ -122,6 +133,20 @@ const IndexPage = () => (
             </Column>
         </Block>
 
+        <Footer>
+            <FooterParagraph icon={IoGitBranch}>
+                <a className="footer-link" href="https://github.com/amphineko/atomicneko">
+                    Fork this template on GitHub
+                </a>
+                <span className="footer-external-link-icon">
+                    <FaExternalLinkAlt />
+                </span>
+            </FooterParagraph>
+            <FooterParagraph icon={IoBulb}>
+                Copyright © 2015-2021 amphineko. Illustrations have their own licenses.
+            </FooterParagraph>
+        </Footer>
+
         <style jsx>{`
             .container {
                 background: url('/assets/images/background-header.svg') no-repeat;
@@ -133,7 +158,17 @@ const IndexPage = () => (
                 flex-direction: column;
                 max-width: 64em;
                 margin: 0 auto;
-                min-height: 100vh;
+            }
+
+            .footer-link {
+                color: inherit;
+                text-decoration: none;
+            }
+
+            .footer-external-link-icon {
+                font-size: 0.75em;
+                margin-left: 0.5em;
+                vertical-align: 0.25em;
             }
 
             .silent-link {
