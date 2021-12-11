@@ -84,8 +84,8 @@ export const Header = ({ children, profileName }: PropsWithChildren<{ profileNam
         <div className="column left-side">
             <a className="head-picture-container" href={HeadPictureOriginal}>
                 <picture>
-                    <source src={HeadPicture.src} srcSet={HeadPicture.srcset} type="image/png" />
-                    <source src={HeadPictureWebP} type="image/webp" />
+                    <source srcSet={HeadPictureWebP} type="image/webp" />
+                    <source srcSet={HeadPicture.srcset} type="image/png" />
                     <img alt="head picture of amphineko" className="head-picture" src={HeadPicture.src} />
                 </picture>
             </a>
