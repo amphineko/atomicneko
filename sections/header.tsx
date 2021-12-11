@@ -103,6 +103,8 @@ export const Header = ({ children, profileName }: PropsWithChildren<{ profileNam
                 border-top-left-radius: 1rem;
                 box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.25);
                 display: flex;
+                flex: 1;
+                flex-direction: row;
                 flex-wrap: wrap;
             }
 
@@ -112,11 +114,18 @@ export const Header = ({ children, profileName }: PropsWithChildren<{ profileNam
             }
 
             .left-side {
-                max-width: 40%;
+                flex-basis: 45%;
             }
 
             .right-side {
-                max-width: 60%;
+                flex-basis: 55%;
+            }
+
+            @media (max-width: 40rem) {
+                .left-side,
+                .right-side {
+                    flex-basis: 100%;
+                }
             }
 
             .head-picture {
