@@ -1,4 +1,7 @@
 import { PropsWithChildren, ReactNode } from 'react'
+import HeadPictureOriginal from '../public/assets/images/amphineko.png'
+import HeadPicture from '../public/assets/images/amphineko.png?resize'
+import HeadPictureWebP from '../public/assets/images/amphineko.png?webp'
 
 export const ProfileNameStandout = ({
     backgroundColor,
@@ -79,10 +82,15 @@ export const ProfileName = ({ children }: PropsWithChildren<unknown>) => (
 export const Header = ({ children, profileName }: PropsWithChildren<{ profileName: ReactNode }>) => (
     <header className="row">
         <div className="column left-side">
-            <a className="head-picture-container" href="/assets/images/amphineko.png">
-                <img alt="head picture of amphineko" className="head-picture" src="/assets/images/amphineko.png" />
+            <a className="head-picture-container" href={HeadPictureOriginal}>
+                <picture>
+                    <source src={HeadPicture.src} srcSet={HeadPicture.srcset} type="image/png" />
+                    <source src={HeadPictureWebP} type="image/webp" />
+                    <img alt="head picture of amphineko" className="head-picture" src={HeadPicture.src} />
+                </picture>
             </a>
         </div>
+
         <div className="column right-side">
             <ProfileName>{profileName}</ProfileName>
             <div>{children}</div>
