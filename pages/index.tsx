@@ -1,3 +1,5 @@
+import { GetStaticProps } from 'next'
+import { PropsWithChildren } from 'react'
 import {
     FaCompactDisc,
     FaExternalLinkAlt,
@@ -11,11 +13,37 @@ import {
 import { IoBulb, IoCloud, IoGitBranch, IoLanguage, IoLink, IoSchool } from 'react-icons/io5'
 import { Account, AccountList, Description, Paragraph } from '../components/blocks'
 import { LabelGroup, LabelItem } from '../components/labels'
+import { UpdatedUsername } from '../components/username'
 import { Block, Column } from '../sections/block'
 import { Footer, FooterParagraph } from '../sections/footer'
 import { Header, ProfileNameStandout } from '../sections/header'
 
-const IndexPage = () => (
+interface IndexPageProps {
+    initialSteamPersonaName?: string
+    steamPersonaNameUrl?: string
+}
+
+interface SteamApiResponse {
+    response?: { players?: { personaname?: string }[] }
+}
+
+const fetchSteamPersonaName = async (url: string) => {
+    const response = await fetch(url)
+    if (!response.ok) {
+        throw new Error(`HTTP error: ${response.status}`)
+    }
+
+    const result = (await response.json()) as SteamApiResponse
+    const personaName = result.response?.players?.[0]?.personaname
+
+    if (typeof personaName === 'string') {
+        return personaName
+    } else {
+        throw new Error('Invalid response from Steam API')
+    }
+}
+
+const IndexPage = ({ initialSteamPersonaName, steamPersonaNameUrl }: PropsWithChildren<IndexPageProps>) => (
     <div className="container">
         <Header
             profileName={
@@ -127,7 +155,11 @@ const IndexPage = () => (
                         Rukatan
                     </Account>
                     <Account href="https://steamcommunity.com/id/amphineko/" icon={FaSteam} title="Steam">
-                        1kar0s
+                        <UpdatedUsername
+                            fn={() => fetchSteamPersonaName(steamPersonaNameUrl)}
+                            initialData={initialSteamPersonaName}
+                            queryKey="steam-persona-name"
+                        />
                     </Account>
                 </AccountList>
             </Column>
@@ -197,3 +229,14 @@ const IndexPage = () => (
 )
 
 export default IndexPage
+
+export const getStaticProps: GetStaticProps<IndexPageProps> = async () => {
+    const steamPersonaNameUrl = process.env.STEAM_PERSONA_NAME_URL
+
+    return {
+        props: {
+            initialSteamPersonaName: await fetchSteamPersonaName(steamPersonaNameUrl),
+            steamPersonaNameUrl,
+        },
+    }
+}
