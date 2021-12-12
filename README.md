@@ -1,6 +1,8 @@
 # ~/amphineko
 
-👋 There's also an ongoing development branch called `next`.
+👋 Hello there.
+
+This project is now archived. Please move forward to my React and next.js implementation at [reactiveneko](https://github.com/amphineko/reactiveneko/).
 
 I'm working on moving to next.js and React, to support more features like server-side dynamic contents and more.
 
