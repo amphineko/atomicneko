@@ -33,7 +33,7 @@
     "url-loader": "^3.0.0",
     "webpack": "^4.42.0",
     "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3",
+    "webpack-dev-server": "^5.0.4",
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {}
