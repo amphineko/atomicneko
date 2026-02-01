@@ -58,6 +58,7 @@
 
 .section.header .picture img {
     box-sizing: content-box;
+    vertical-align: bottom;
     height: 100%;
     width: 100%;
 }
